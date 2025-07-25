@@ -44,11 +44,10 @@
 
       <tr>
 
-        <td style=" border: 3px solid black; background-color: yellow;">
-          <input type="number" class="venta"
-            style="background-color: yellow; font-size: 17px; font-weight: bold; width: 140px; height: 25px; box-shadow: 0 0 8px rgba(8, 2, 5, 1); border-radius: 6px;"
-            oninput="formatearMiles(this)">
-        </td>
+       <tr>
+      <td style="border: 3px solid black; background-color: yellow;">
+        <input type="number" class="venta" oninput="formatearMiles(this)">
+      </td>
 
         <td><textarea></textarea></td>
         <td style="border-top: 3px solid; border-bottom: 3px solid; border-left: 3px solid;">Nequi</td>
@@ -2343,55 +2342,39 @@
 
 
     document.addEventListener("DOMContentLoaded", () => {
-    const campos = document.querySelectorAll("textarea, input[type=number], input[type=text], input.cantidad2, input.cantidad3, input.cantidad4, input.venta");
+      const campos = document.querySelectorAll("textarea, input[type=number], input[type=text], input.cantidad2, input.cantidad3, input.cantidad4, input.venta");
 
-    // === Restaurar datos guardados ===
-    campos.forEach((campo, index) => {
-      const valorGuardado = localStorage.getItem(`campo_${index}`);
-      if (valorGuardado !== null) {
-        campo.value = valorGuardado;
-        if (campo.classList.contains("venta")) {
-          campo.dataset.valor = valorGuardado.replace(/\D/g, '');
-          campo.value = campo.dataset.valor.replace(/\B(?=(\d{3})+(?!\d))/g, ".");
+      // Restaurar valores
+      campos.forEach((campo, index) => {
+        const guardado = localStorage.getItem(`campo_${index}`);
+        if (guardado !== null) {
+          campo.value = guardado;
+          if (campo.classList.contains("venta")) {
+            campo.dataset.valor = guardado.replace(/\D/g, '');
+            campo.value = campo.dataset.valor.replace(/\B(?=(\d{3})+(?!\d))/g, ".");
+          }
         }
-      }
-    });
+      });
 
-    // === Guardar cambios automáticamente ===
-    campos.forEach((campo, index) => {
-      campo.addEventListener("input", () => {
-        localStorage.setItem(`campo_${index}`, campo.value);
+      // Guardar valores al escribir
+      campos.forEach((campo, index) => {
+        campo.addEventListener("input", () => {
+          localStorage.setItem(`campo_${index}`, campo.value);
+        });
       });
     });
-  });
 
-  // ✅ ÚNICA FUNCIÓN formatearMiles
-  function formatearMiles(input) {
-    let soloNumeros = input.value.replace(/\D/g, '');
+    function formatearMiles(input) {
+      let soloNumeros = input.value.replace(/\D/g, '');
+      input.dataset.valor = soloNumeros || "0";
+      const valorFormateado = soloNumeros.replace(/\B(?=(\d{3})+(?!\d))/g, ".");
+      const posicion = input.selectionStart;
+      input.value = valorFormateado;
+      input.setSelectionRange(input.value.length, input.value.length);
 
-    // Opcional: limitar a máximo 12 dígitos
-    // soloNumeros = soloNumeros.slice(0, 12);
-
-    input.dataset.valor = soloNumeros || "0";
-
-    const valorFormateado = soloNumeros.replace(/\B(?=(\d{3})+(?!\d))/g, ".");
-    const posInicial = input.selectionStart;
-
-    input.value = valorFormateado;
-    input.setSelectionRange(input.value.length, input.value.length);
-
-    detectarFila?.(input);
-    calcularTotales?.();
-  }
-
-  // Si estas funciones existen en otro lado, se usarán. Si no, no pasa nada.
-  function detectarFila(input) {
-    // Puedes personalizar si lo usas
-  }
-
-  function calcularTotales() {
-    // Puedes personalizar si lo usas
-  }
+      detectarFila?.(input);
+      calcularTotales?.();
+    }
 
 
 
