@@ -36,7 +36,19 @@
         <th style=" border: 3px solid;"></th>
         <th style=" border: 3px solid;"></th>
         <th></th>
-        <th></th>
+<th style="background-color: #ccc; text-align: center; font-weight: bold; color: black; font-size: 12px; vertical-align: middle; padding: 5px;">
+  <div style="display: inline-flex; align-items: center; justify-content: center; gap: 6px;">
+    <img 
+      src="https://media.istockphoto.com/id/1408463718/es/vector/recordatorio-en-calendario-fecha-l%C3%ADmite-del-calendario-mensaje-push-de-notificaci%C3%B3n-de.jpg?s=612x612&w=0&k=20&c=MyiTsnAG5L-A139FJV9t-fvmVmhA6nDM4LUaqiEFp04=" 
+      alt=""
+      style="width: 35px; height: 35px; border-radius: 50%;">
+    <span id="fechaHoraActual" style="font-size: 13px;"></span>
+  </div>
+</th>
+
+
+
+
         <th style="width: 105px;"></th>
       </tr>
     </thead>
@@ -44,36 +56,39 @@
 
       <tr>
 
-       <tr>
-      <td style="border: 3px solid black; background-color: yellow;">
-        <input type="number" class="venta" oninput="formatearMiles(this)">
-      </td>
+        <td style=" border: 3px solid black; background-color: yellow;">
+          <input type="tel" class="venta"
+            style="background-color: yellow; font-size: 17px; font-weight: bold; width: 100px; height: 25px; box-shadow: 0 0 8px rgba(8, 2, 5, 1); border-radius: 6px; text-align: center;"
+            oninput="formatearMiles(this)">
+
+
+        </td>
 
         <td><textarea></textarea></td>
         <td style="border-top: 3px solid; border-bottom: 3px solid; border-left: 3px solid;">Nequi</td>
-        <td style="border: 3px solid;"><input type="number" class="cantidad2" id="nequi1"
+        <td style="border: 3px solid;"><input type="let" class="cantidad2" id="nequi1"
             style=" font-size: 17px; font-weight: bold; width: 100px; height: 25px; text-align: center; "
             oninput="formatearMiles(this)"></td>
 
         <td><textarea></textarea></td>
 
-        <td  class="valor-fijo" style="font-weight:bolder ;  border: 3px solid;">100,000</td>
-        <td style="border: 3px solid; "><input type="number" class="cantidad"
+        <td class="valor-fijo" style="font-weight:bolder ;  border: 3px solid;">100,000</td>
+        <td style="border: 3px solid; "><input type="let" class="cantidad"
             style="height: 25px; width: 50px;text-align: center;"></td>
-<td class="resultado resultado-billetes" style="font-weight: bolder; border: 5px solid;">
-</td>
+        <td class="resultado resultado-billetes" style="font-weight: bolder; border: 5px solid;">
+        </td>
 
 
         <td></td>
 
         <td class="valor-fijo" style="font-weight: bolder; border: 3px solid;">1000</td>
-        <td style="border: 3px solid;"> <input type="number" class="cantidad"
+        <td style="border: 3px solid;"> <input type="let" class="cantidad"
             style="height: 25px;width: 50px;text-align: center;"></td>
         <td class="resultado resultado-monedas" style="font-weight: bolder;border: 3px solid;"></td>
 
         <td><textarea></textarea></td>
         <td id="nequi" style=" border: 3px solid;">Nequii</td>
-        <td style="width: 70px;  border: 3px solid;   "><input type="number" class="cantidad4"
+        <td style="width: 70px;  border: 3px solid;   "><input type="let" class="cantidad4"
             style=" font-size: 17px; font-weight: bold; width: 100px; height: 25px; text-align: center;"
             oninput="formatearMiles(this)"></td>
 
@@ -88,23 +103,23 @@
         <td><textarea></textarea></td>
         <td style="border-top: 3px solid; border-bottom: 3px solid; border-left: 3px solid;">Don Alfonso</td>
 
-        <td style="border: 3px solid;"><input type="number" class="cantidad2" id="alfonso1"
+        <td style="border: 3px solid;"><input type="let" class="cantidad2" id="alfonso1"
             style=" font-size: 17px; font-weight: bold; width: 100px; height: 25px;text-align: center;"
             oninput="formatearMiles(this)"></td>
 
         <td><textarea></textarea></td>
         <td class="valor-fijo" style="font-weight: bolder;border: 3px solid;">50,000</td>
-        <td style="border: 3px solid;"><input type="number" class="cantidad"
+        <td style="border: 3px solid;"><input type="let" class="cantidad"
             style="height: 25px; width: 50px;text-align: center;"></td>
         <td class="resultado resultado-billetes" style="font-weight: bolder;border: 3px solid;"></td>
         <td><textarea></textarea></td>
         <td class="valor-fijo" style="font-weight: bolder;border: 3px solid;">500</td>
-        <td style="border: 3px solid;"><input type="number" class="cantidad"
+        <td style="border: 3px solid;"><input type="let" class="cantidad"
             style="height: 25px;width: 50px;text-align: center;"></td>
         <td class="resultado resultado-monedas" style="font-weight: bolder;border: 3px solid;"></td>
         <td><textarea></textarea></td>
         <td id="alfonso" style=" border: 3px solid;">Don Alfonso</td>
-        <td style="width: 70px; border: 3px solid;"><input type="number" class="cantidad4"
+        <td style="width: 70px; border: 3px solid;"><input type="let" class="cantidad4"
             style=" font-size: 17px; font-weight: bold; width: 100px; height: 25px; text-align: center;"
             oninput="formatearMiles(this)"></td>
         <td><textarea></textarea></td>
@@ -116,22 +131,22 @@
         <td id="sobra" style="font-weight: bolder; border: 3px solid;color: black;"></td>
         <td><textarea></textarea></td>
         <td style="border-top: 3px solid; border-bottom: 3px solid; border-left: 3px solid;">Descuadre</td>
-        <td style="border: 3px solid;"><input type="number" class="cantidad2" id="descuadre1"
+        <td style="border: 3px solid;"><input type="let" class="cantidad2" id="descuadre1"
             style=" font-size: 17px; font-weight: bold; width: 100px; height: 25px; text-align: center;"
             oninput="formatearMiles(this)"></td>
         <td><textarea></textarea></td>
         <td class="valor-fijo" style="font-weight: bolder;border: 3px solid;">20,000</td>
-        <td style="border: 3px solid;"><input type="number" class="cantidad"
+        <td style="border: 3px solid;"><input type="let" class="cantidad"
             style="height: 25px; width: 50px;text-align: center;"></td>
         <td class="resultado resultado-billetes" style="font-weight: bolder;border: 3px solid;"></td>
         <td><textarea></textarea></td>
         <td class="valor-fijo" style="font-weight: bolder;border: 3px solid;">200</td>
-        <td style="border: 3px solid;"><input type="number" class="cantidad"
+        <td style="border: 3px solid;"><input type="let" class="cantidad"
             style="height: 25px;width: 50px;text-align: center;"></td>
         <td class="resultado resultado-monedas" style="font-weight: bolder;border: 3px solid;"></td>
         <td><textarea></textarea></td>
         <td style=" border: 3px solid;" id="descuadre">Descuadre</td>
-        <td style="width: 70px; border: 3px solid;"><input type="number" class="cantidad4"
+        <td style="width: 70px; border: 3px solid;"><input type="let" class="cantidad4"
             style=" font-size: 17px; font-weight: bold; width: 100px; height: 25px; text-align: center;"
             oninput="formatearMiles(this)"></td>
         <td><textarea></textarea></td>
@@ -143,22 +158,22 @@
         <td id="resul" style="font-weight: bolder; border: 3px solid;color: black;"></td>
         <td><textarea></textarea></td>
         <td style="border-top: 3px solid; border-bottom: 3px solid; border-left: 3px solid;">Mío</td>
-        <td style="border: 3px solid;"><input type="number" class="cantidad2" id="mio1"
+        <td style="border: 3px solid;"><input type="let" class="cantidad2" id="mio1"
             style=" font-size: 17px; font-weight: bold; width: 100px; height: 25px; text-align: center;"
             oninput="formatearMiles(this)"></td>
         <td><textarea></textarea></td>
         <td class="valor-fijo" style="font-weight: bolder;border: 3px solid;">10,000</td>
-        <td style="border: 3px solid;"><input type="number" class="cantidad"
+        <td style="border: 3px solid;"><input type="let" class="cantidad"
             style="height: 25px; width: 50px;text-align: center;"></td>
         <td class="resultado resultado-billetes" style="font-weight: bolder;border: 3px solid;"></td>
         <td><textarea></textarea></td>
         <td class="valor-fijo" style="font-weight: bolder;border: 3px solid; ">100</td>
-        <td style="border: 3px solid;"><input type="number" class="cantidad"
+        <td style="border: 3px solid;"><input type="let" class="cantidad"
             style="height: 25px;width: 50px;text-align: center;"></td>
         <td class="resultado resultado-monedas" style="font-weight: bolder;border: 3px solid;"></td>
         <td><textarea></textarea></td>
         <td id="mio" style="border: 3px solid;">Mío</td>
-        <td style="width: 70px; border: 3px solid;"><input type="number" class="cantidad4"
+        <td style="width: 70px; border: 3px solid;"><input type="let" class="cantidad4"
             style=" font-size: 17px; font-weight: bold; width: 100px; height: 25px; text-align: center;"
             oninput="formatearMiles(this)"></td>
         <td><textarea></textarea></td>
@@ -170,22 +185,22 @@
         <td></td>
         <td><textarea></textarea></td>
         <td style="border: 3px solid;"><textarea></textarea></td>
-        <td style="border: 3px solid;"><input type="number" class="cantidad2"
+        <td style="border: 3px solid;"><input type="let" class="cantidad2"
             style=" font-size: 17px; font-weight: bold; width: 100px; height: 25px;text-align: center;"
             oninput="formatearMiles(this)"></td>
         <td><textarea></textarea></td>
         <td class="valor-fijo" style="font-weight: bolder;border: 3px solid;">5,000</td>
-        <td style="border: 3px solid;"><input type="number" class="cantidad"
+        <td style="border: 3px solid;"><input type="let" class="cantidad"
             style="height: 25px; width: 50px;text-align: center;"></td>
         <td class="resultado resultado-billetes" style="font-weight: bolder;border: 3px solid;"></td>
         <td><textarea></textarea></td>
         <td class="valor-fijo" style="font-weight: bolder;border: 3px solid;">50</td>
-        <td style="border: 3px solid;"><input type="number" class="cantidad"
+        <td style="border: 3px solid;"><input type="let" class="cantidad"
             style="height: 25px;width: 50px; text-align: center;"></td>
         <td class="resultado resultado-monedas" style="font-weight: bolder;border: 3px solid;"></td>
         <td><textarea></textarea></td>
         <td style="border: 3px solid;"><textarea></textarea></td>
-        <td style="width: 70px; border: 3px solid;"><input type="number" class="cantidad4"
+        <td style="width: 70px; border: 3px solid;"><input type="let" class="cantidad4"
             style=" font-size: 17px; font-weight: bold; width: 100px; height: 25px; text-align: center;"
             oninput="formatearMiles(this)"></td>
         <td><textarea></textarea></td>
@@ -211,12 +226,12 @@
 
         <td><textarea></textarea></td>
         <td style="border: 3px solid;"><textarea></textarea></td>
-        <td style="border: 3px solid;"><input type="number" class="cantidad2"
+        <td style="border: 3px solid;"><input type="let" class="cantidad2"
             style=" font-size: 17px; font-weight: bold; width: 100px; height: 25px;text-align: center;"
             oninput="formatearMiles(this)"></td>
         <td><textarea></textarea></td>
         <td class="valor-fijo" style="font-weight: bolder;border: 3px solid;">2,000</td>
-        <td style="border: 3px solid;"><input type="number" class="cantidad"
+        <td style="border: 3px solid;"><input type="let" class="cantidad"
             style="height: 25px; width: 50px;text-align: center;"></td>
         <td class="resultado resultado-billetes" style="font-weight: bolder;border: 3px solid;"></td>
         <td><textarea></textarea></td>
@@ -225,7 +240,7 @@
         <td><textarea></textarea></td>
         <td><textarea></textarea></td>
         <td style="border: 3px solid;"><textarea></textarea></td>
-        <td style="width: 70px; border: 3px solid;"><input type="number" class="cantidad4"
+        <td style="width: 70px; border: 3px solid;"><input type="let" class="cantidad4"
             style=" font-size: 17px; font-weight: bold; width: 100px; height: 25px; text-align: center;"
             oninput="formatearMiles(this)"></td>
         <td><textarea></textarea></td>
@@ -237,7 +252,7 @@
         <td style="border-bottom: 2px solid black;"><textarea></textarea></td>
         <td><textarea></textarea></td>
         <td style="border: 3px solid;"><textarea></textarea></td>
-        <td style="border: 3px solid;"><input type="number" class="cantidad2"
+        <td style="border: 3px solid;"><input type="let" class="cantidad2"
             style=" font-size: 17px; font-weight: bold; width: 100px; height: 25px;text-align: center;"
             oninput="formatearMiles(this)"></td>
         <td><textarea></textarea></td>
@@ -251,7 +266,7 @@
         <td><textarea></textarea></td>
         <td><textarea></textarea></td>
         <td style="border: 3px solid;"><textarea></textarea></td>
-        <td style="width: 70px; border: 3px solid;"><input type="number" class="cantidad4"
+        <td style="width: 70px; border: 3px solid;"><input type="let" class="cantidad4"
             style=" font-size: 17px; font-weight: bold; width: 100px; height: 25px; text-align: center;"
             oninput="formatearMiles(this)"></td>
         <td><textarea></textarea></td>
@@ -264,7 +279,7 @@
         <td> </td>
         <td><textarea></textarea></td>
         <td style="border: 3px solid;"><textarea></textarea></td>
-        <td style="border: 3px solid;"><input type="number" class="cantidad2"
+        <td style="border: 3px solid;"><input type="let" class="cantidad2"
             style=" font-size: 17px; font-weight: bold; width: 100px; height: 25px;text-align: center;"
             oninput="formatearMiles(this)"></td>
         <td><textarea></textarea></td>
@@ -290,7 +305,7 @@
 
         <td><textarea></textarea></td>
         <td style="border: 3px solid;"><textarea></textarea></td>
-        <td style="border: 3px solid;"><input type="number" class="cantidad2"
+        <td style="border: 3px solid;"><input type="let" class="cantidad2"
             style=" font-size: 17px; font-weight: bold; width: 100px; height: 25px;text-align: center;"
             oninput="formatearMiles(this)"></td>
         <td><textarea></textarea></td>
@@ -324,7 +339,7 @@
           </button></td>
         <td><textarea></textarea></td>
         <td style="border: 3px solid;"> <textarea></textarea></td>
-        <td style="border: 3px solid;"><input type="number" class="cantidad2"
+        <td style="border: 3px solid;"><input type="let" class="cantidad2"
             style=" font-size: 17px; font-weight: bold; width: 100px; height: 25px;text-align: center;"
             oninput="formatearMiles(this)"></td>
         <td><textarea></textarea></td>
@@ -339,12 +354,12 @@
         <td><textarea></textarea></td>
         <td><textarea></textarea></td>
         <td style=" border: 3px solid; ">
-          <input type="number" class="input1"
+          <input type="let" class="input1"
             style=" font-size: 17px; font-weight: bold; width: 100px; height: 25px;  border-radius: 6px; text-align: center;"
             oninput="formatearMiles(this)">
         </td>
         <td style=" border: 3px solid; width: 110px; ">
-          <input type="number" class="input2"
+          <input type="let" class="input2"
             style=" font-size: 17px; font-weight: bold; width: 100px; height: 25px;  border-radius: 6px; text-align: center;"
             oninput="formatearMiles(this)">
         </td>
@@ -376,12 +391,12 @@
         <td><textarea></textarea></td>
         <td><textarea></textarea></td>
         <td style=" border: 3px solid; ">
-          <input type="number" class="input3"
+          <input type="let" class="input3"
             style=" font-size: 17px; font-weight: bold; width: 100px; height: 25px;  border-radius: 6px; text-align: center;"
             oninput="formatearMiles(this)">
         </td>
         <td style=" border: 3px solid; width: 110px; ">
-          <input type="number" class="input4"
+          <input type="let" class="input4"
             style=" font-size: 17px; font-weight: bold; width: 100px; height: 25px;  border-radius: 6px; text-align: center;"
             oninput="formatearMiles(this)">
         </td>
@@ -410,12 +425,12 @@
         <td><textarea></textarea></td>
         <td><textarea></textarea></td>
         <td style=" border: 3px solid; ">
-          <input type="number" class="input5"
+          <input type="let" class="input5"
             style=" font-size: 17px; font-weight: bold; width: 100px; height: 25px;  border-radius: 6px; text-align: center;"
             oninput="formatearMiles(this)">
         </td>
         <td style=" border: 3px solid; width: 110px; ">
-          <input type="number" class="input6"
+          <input type="let" class="input6"
             style=" font-size: 17px; font-weight: bold; width: 100px; height: 25px;  border-radius: 6px; text-align: center;"
             oninput="formatearMiles(this)">
         </td>
@@ -453,12 +468,12 @@
         <td><textarea></textarea></td>
         <td><textarea></textarea></td>
         <td style=" border: 3px solid; ">
-          <input type="number" class="input7"
+          <input type="let" class="input7"
             style=" font-size: 17px; font-weight: bold; width: 100px; height: 25px;  border-radius: 6px; text-align: center;"
             oninput="formatearMiles(this)">
         </td>
         <td style=" border: 3px solid; width: 110px; ">
-          <input type="number" class="input8"
+          <input type="let" class="input8"
             style=" font-size: 17px; font-weight: bold; width: 100px; height: 25px;  border-radius: 6px; text-align: center;"
             oninput="formatearMiles(this)">
         </td>
@@ -487,12 +502,12 @@
         <td><textarea></textarea></td>
         <td><textarea></textarea></td>
         <td style=" border: 3px solid; ">
-          <input type="number" class="input9"
+          <input type="let" class="input9"
             style=" font-size: 17px; font-weight: bold; width: 100px; height: 25px;  border-radius: 6px; text-align: center;"
             oninput="formatearMiles(this)">
         </td>
         <td style=" border: 3px solid; width: 110px; ">
-          <input type="number" class="input10"
+          <input type="let" class="input10"
             style=" font-size: 17px; font-weight: bold; width: 100px; height: 25px;  border-radius: 6px; text-align: center;"
             oninput="formatearMiles(this)">
         </td>
@@ -522,12 +537,12 @@
         <td><textarea></textarea></td>
         <td><textarea></textarea></td>
         <td style=" border: 3px solid; ">
-          <input type="number" class="input11"
+          <input type="let" class="input11"
             style=" font-size: 17px; font-weight: bold; width: 100px; height: 25px;  border-radius: 6px; text-align: center;"
             oninput="formatearMiles(this)">
         </td>
         <td style=" border: 3px solid; width: 110px; ">
-          <input type="number" class="input12"
+          <input type="let" class="input12"
             style=" font-size: 17px; font-weight: bold; width: 100px; height: 25px;  border-radius: 6px; text-align: center;"
             oninput="formatearMiles(this)">
         </td>
@@ -558,12 +573,12 @@
         <td><textarea></textarea></td>
         <td><textarea></textarea></td>
         <td style=" border: 3px solid; ">
-          <input type="number" class="input13"
+          <input type="let" class="input13"
             style=" font-size: 17px; font-weight: bold; width: 100px; height: 25px;  border-radius: 6px; text-align: center;"
             oninput="formatearMiles(this)">
         </td>
         <td style=" border: 3px solid; width: 110px; ">
-          <input type="number" class="input14"
+          <input type="let" class="input14"
             style=" font-size: 17px; font-weight: bold; width: 100px; height: 25px;  border-radius: 6px; text-align: center;"
             oninput="formatearMiles(this)">
         </td>
@@ -592,12 +607,12 @@
         <td><textarea></textarea></td>
         <td><textarea></textarea></td>
         <td style=" border: 3px solid; ">
-          <input type="number" class="input15"
+          <input type="let" class="input15"
             style=" font-size: 17px; font-weight: bold; width: 100px; height: 25px;  border-radius: 6px; text-align: center;"
             oninput="formatearMiles(this)">
         </td>
         <td style=" border: 3px solid; width: 110px; ">
-          <input type="number" class="input16"
+          <input type="let" class="input16"
             style=" font-size: 17px; font-weight: bold; width: 100px; height: 25px;  border-radius: 6px; text-align: center;"
             oninput="formatearMiles(this)">
         </td>
@@ -626,12 +641,12 @@
         <td><textarea></textarea></td>
         <td><textarea></textarea></td>
         <td style=" border: 3px solid; ">
-          <input type="number" class="input17"
+          <input type="let" class="input17"
             style=" font-size: 17px; font-weight: bold; width: 100px; height: 25px;  border-radius: 6px; text-align: center;"
             oninput="formatearMiles(this)">
         </td>
         <td style=" border: 3px solid; width: 110px; ">
-          <input type="number" class="input18"
+          <input type="let" class="input18"
             style=" font-size: 17px; font-weight: bold; width: 100px; height: 25px;  border-radius: 6px; text-align: center;"
             oninput="formatearMiles(this)">
         </td>
@@ -661,12 +676,12 @@
         <td><textarea></textarea></td>
         <td><textarea></textarea></td>
         <td style=" border: 3px solid; ">
-          <input type="number" class="input19"
+          <input type="let" class="input19"
             style=" font-size: 17px; font-weight: bold; width: 100px; height: 25px;  border-radius: 6px; text-align: center;"
             oninput="formatearMiles(this)">
         </td>
         <td style=" border: 3px solid; width: 110px; ">
-          <input type="number" class="input20"
+          <input type="let" class="input20"
             style=" font-size: 17px; font-weight: bold; width: 100px; height: 25px;  border-radius: 6px; text-align: center;"
             oninput="formatearMiles(this)">
         </td>
@@ -696,12 +711,12 @@
         <td><textarea></textarea></td>
         <td><textarea></textarea></td>
         <td style=" border: 3px solid; ">
-          <input type="number" class="input21"
+          <input type="let" class="input21"
             style=" font-size: 17px; font-weight: bold; width: 100px; height: 25px;  border-radius: 6px; text-align: center;"
             oninput="formatearMiles(this)">
         </td>
         <td style=" border: 3px solid; width: 110px; ">
-          <input type="number" class="input22"
+          <input type="let" class="input22"
             style=" font-size: 17px; font-weight: bold; width: 100px; height: 25px;  border-radius: 6px; text-align: center;"
             oninput="formatearMiles(this)">
         </td>
@@ -730,12 +745,12 @@
         <td><textarea></textarea></td>
         <td><textarea></textarea></td>
         <td style=" border: 3px solid; ">
-          <input type="number" class="input23"
+          <input type="let" class="input23"
             style=" font-size: 17px; font-weight: bold; width: 100px; height: 25px;  border-radius: 6px; text-align: center;"
             oninput="formatearMiles(this)">
         </td>
         <td style=" border: 3px solid; width: 110px; ">
-          <input type="number" class="input24"
+          <input type="let" class="input24"
             style=" font-size: 17px; font-weight: bold; width: 100px; height: 25px;  border-radius: 6px; text-align: center;"
             oninput="formatearMiles(this)">
         </td>
@@ -764,12 +779,12 @@
         <td><textarea></textarea></td>
         <td><textarea></textarea></td>
         <td style=" border: 3px solid; ">
-          <input type="number" class="input25"
+          <input type="let" class="input25"
             style=" font-size: 17px; font-weight: bold; width: 100px; height: 25px;  border-radius: 6px; text-align: center;"
             oninput="formatearMiles(this)">
         </td>
         <td style=" border: 3px solid; width: 110px; ">
-          <input type="number" class="input26"
+          <input type="let" class="input26"
             style=" font-size: 17px; font-weight: bold; width: 100px; height: 25px;  border-radius: 6px; text-align: center;"
             oninput="formatearMiles(this)">
         </td>
@@ -798,12 +813,12 @@
         <td><textarea></textarea></td>
         <td><textarea></textarea></td>
         <td style=" border: 3px solid; ">
-          <input type="number" class="input27"
+          <input type="let" class="input27"
             style=" font-size: 17px; font-weight: bold; width: 100px; height: 25px;  border-radius: 6px; text-align: center;"
             oninput="formatearMiles(this)">
         </td>
         <td style=" border: 3px solid; width: 110px; ">
-          <input type="number" class="input28"
+          <input type="let" class="input28"
             style=" font-size: 17px; font-weight: bold; width: 100px; height: 25px;  border-radius: 6px; text-align: center;"
             oninput="formatearMiles(this)">
         </td>
@@ -832,12 +847,12 @@
         <td><textarea></textarea></td>
         <td><textarea></textarea></td>
         <td style=" border: 3px solid; ">
-          <input type="number" class="input29"
+          <input type="let" class="input29"
             style=" font-size: 17px; font-weight: bold; width: 100px; height: 25px;  border-radius: 6px; text-align: center;"
             oninput="formatearMiles(this)">
         </td>
         <td style=" border: 3px solid; width: 110px; ">
-          <input type="number" class="input30"
+          <input type="let" class="input30"
             style=" font-size: 17px; font-weight: bold; width: 100px; height: 25px;  border-radius: 6px; text-align: center;"
             oninput="formatearMiles(this)">
         </td>
@@ -866,12 +881,12 @@
         <td><textarea></textarea></td>
         <td><textarea></textarea></td>
         <td style=" border: 3px solid; ">
-          <input type="number" class="input31"
+          <input type="let" class="input31"
             style=" font-size: 17px; font-weight: bold; width: 100px; height: 25px;  border-radius: 6px; text-align: center;"
             oninput="formatearMiles(this)">
         </td>
         <td style=" border: 3px solid; width: 110px; ">
-          <input type="number" class="input32"
+          <input type="let" class="input32"
             style=" font-size: 17px; font-weight: bold; width: 100px; height: 25px;  border-radius: 6px; text-align: center;"
             oninput="formatearMiles(this)">
         </td>
@@ -900,12 +915,12 @@
         <td><textarea></textarea></td>
         <td><textarea></textarea></td>
         <td style=" border: 3px solid; ">
-          <input type="number" class="input33"
+          <input type="let" class="input33"
             style=" font-size: 17px; font-weight: bold; width: 100px; height: 25px;  border-radius: 6px; text-align: center;"
             oninput="formatearMiles(this)">
         </td>
         <td style=" border: 3px solid; width: 110px; ">
-          <input type="number" class="input34"
+          <input type="let" class="input34"
             style=" font-size: 17px; font-weight: bold; width: 100px; height: 25px;  border-radius: 6px; text-align: center;"
             oninput="formatearMiles(this)">
         </td>
@@ -934,12 +949,12 @@
         <td><textarea></textarea></td>
         <td><textarea></textarea></td>
         <td style=" border: 3px solid; ">
-          <input type="number" class="input35"
+          <input type="let" class="input35"
             style=" font-size: 17px; font-weight: bold; width: 100px; height: 25px;  border-radius: 6px; text-align: center;"
             oninput="formatearMiles(this)">
         </td>
         <td style=" border: 3px solid; width: 110px; ">
-          <input type="number" class="input36"
+          <input type="let" class="input36"
             style=" font-size: 17px; font-weight: bold; width: 100px; height: 25px;  border-radius: 6px; text-align: center;"
             oninput="formatearMiles(this)">
         </td>
@@ -968,12 +983,12 @@
         <td><textarea></textarea></td>
         <td><textarea></textarea></td>
         <td style=" border: 3px solid; ">
-          <input type="number" class="input37"
+          <input type="let" class="input37"
             style=" font-size: 17px; font-weight: bold; width: 100px; height: 25px;  border-radius: 6px; text-align: center;"
             oninput="formatearMiles(this)">
         </td>
         <td style=" border: 3px solid; width: 110px; ">
-          <input type="number" class="input38"
+          <input type="let" class="input38"
             style=" font-size: 17px; font-weight: bold; width: 100px; height: 25px;  border-radius: 6px; text-align: center;"
             oninput="formatearMiles(this)">
         </td>
@@ -1002,12 +1017,12 @@
         <td><textarea></textarea></td>
         <td><textarea></textarea></td>
         <td style=" border: 3px solid; ">
-          <input type="number" class="input39"
+          <input type="let" class="input39"
             style=" font-size: 17px; font-weight: bold; width: 100px; height: 25px;  border-radius: 6px; text-align: center;"
             oninput="formatearMiles(this)">
         </td>
         <td style=" border: 3px solid; width: 110px; ">
-          <input type="number" class="input40"
+          <input type="let" class="input40"
             style=" font-size: 17px; font-weight: bold; width: 100px; height: 25px;  border-radius: 6px; text-align: center;"
             oninput="formatearMiles(this)">
         </td>
@@ -1036,12 +1051,12 @@
         <td><textarea></textarea></td>
         <td><textarea></textarea></td>
         <td style=" border: 3px solid; ">
-          <input type="number" class="input41"
+          <input type="let" class="input41"
             style=" font-size: 17px; font-weight: bold; width: 100px; height: 25px;  border-radius: 6px; text-align: center;"
             oninput="formatearMiles(this)">
         </td>
         <td style=" border: 3px solid; width: 110px; ">
-          <input type="number" class="input42"
+          <input type="let" class="input42"
             style=" font-size: 17px; font-weight: bold; width: 100px; height: 25px;  border-radius: 6px; text-align: center;"
             oninput="formatearMiles(this)">
         </td>
@@ -1070,12 +1085,12 @@
         <td><textarea></textarea></td>
         <td><textarea></textarea></td>
         <td style=" border: 3px solid; ">
-          <input type="number" class="input43"
+          <input type="let" class="input43"
             style=" font-size: 17px; font-weight: bold; width: 100px; height: 25px;  border-radius: 6px; text-align: center;"
             oninput="formatearMiles(this)">
         </td>
         <td style=" border: 3px solid; width: 110px; ">
-          <input type="number" class="input44"
+          <input type="let" class="input44"
             style=" font-size: 17px; font-weight: bold; width: 100px; height: 25px;  border-radius: 6px; text-align: center;"
             oninput="formatearMiles(this)">
         </td>
@@ -1104,12 +1119,12 @@
         <td><textarea></textarea></td>
         <td><textarea></textarea></td>
         <td style=" border: 3px solid; ">
-          <input type="number" class="input45"
+          <input type="let" class="input45"
             style=" font-size: 17px; font-weight: bold; width: 100px; height: 25px;  border-radius: 6px; text-align: center;"
             oninput="formatearMiles(this)">
         </td>
         <td style=" border: 3px solid; width: 110px; ">
-          <input type="number" class="input46"
+          <input type="let" class="input46"
             style=" font-size: 17px; font-weight: bold; width: 100px; height: 25px;  border-radius: 6px; text-align: center;"
             oninput="formatearMiles(this)">
         </td>
@@ -1138,12 +1153,12 @@
         <td><textarea></textarea></td>
         <td><textarea></textarea></td>
         <td style=" border: 3px solid; ">
-          <input type="number" class="input47"
+          <input type="let" class="input47"
             style=" font-size: 17px; font-weight: bold; width: 100px; height: 25px;  border-radius: 6px; text-align: center;"
             oninput="formatearMiles(this)">
         </td>
         <td style=" border: 3px solid; width: 110px; ">
-          <input type="number" class="input48"
+          <input type="let" class="input48"
             style=" font-size: 17px; font-weight: bold; width: 100px; height: 25px;  border-radius: 6px; text-align: center;"
             oninput="formatearMiles(this)">
         </td>
@@ -1172,12 +1187,12 @@
         <td><textarea></textarea></td>
         <td><textarea></textarea></td>
         <td style=" border: 3px solid; ">
-          <input type="number" class="input49"
+          <input type="let" class="input49"
             style=" font-size: 17px; font-weight: bold; width: 100px; height: 25px;  border-radius: 6px; text-align: center;"
             oninput="formatearMiles(this)">
         </td>
         <td style=" border: 3px solid; width: 110px; ">
-          <input type="number" class="input50"
+          <input type="let" class="input50"
             style=" font-size: 17px; font-weight: bold; width: 100px; height: 25px;  border-radius: 6px; text-align: center;"
             oninput="formatearMiles(this)">
         </td>
@@ -1207,12 +1222,12 @@
         <td><textarea></textarea></td>
         <td><textarea></textarea></td>
         <td style=" border: 3px solid; ">
-          <input type="number" class="input51"
+          <input type="let" class="input51"
             style=" font-size: 17px; font-weight: bold; width: 100px; height: 25px;  border-radius: 6px; text-align: center;"
             oninput="formatearMiles(this)">
         </td>
         <td style=" border: 3px solid; width: 110px; ">
-          <input type="number" class="input52"
+          <input type="let" class="input52"
             style=" font-size: 17px; font-weight: bold; width: 100px; height: 25px;  border-radius: 6px; text-align: center;"
             oninput="formatearMiles(this)">
         </td>
@@ -1241,12 +1256,12 @@
         <td><textarea></textarea></td>
         <td><textarea></textarea></td>
         <td style=" border: 3px solid; ">
-          <input type="number" class="input53"
+          <input type="let" class="input53"
             style=" font-size: 17px; font-weight: bold; width: 100px; height: 25px;  border-radius: 6px; text-align: center;"
             oninput="formatearMiles(this)">
         </td>
         <td style=" border: 3px solid; width: 110px; ">
-          <input type="number" class="input54"
+          <input type="let" class="input54"
             style=" font-size: 17px; font-weight: bold; width: 100px; height: 25px;  border-radius: 6px; text-align: center;"
             oninput="formatearMiles(this)">
         </td>
@@ -1276,12 +1291,12 @@
         <td><textarea></textarea></td>
         <td><textarea></textarea></td>
         <td style=" border: 3px solid; ">
-          <input type="number" class="input55"
+          <input type="let" class="input55"
             style=" font-size: 17px; font-weight: bold; width: 100px; height: 25px;  border-radius: 6px; text-align: center;"
             oninput="formatearMiles(this)">
         </td>
         <td style=" border: 3px solid; width: 110px; ">
-          <input type="number" class="input56"
+          <input type="let" class="input56"
             style=" font-size: 17px; font-weight: bold; width: 100px; height: 25px;  border-radius: 6px; text-align: center;"
             oninput="formatearMiles(this)">
         </td>
@@ -1310,12 +1325,12 @@
         <td><textarea></textarea></td>
         <td><textarea></textarea></td>
         <td style=" border: 3px solid; ">
-          <input type="number" class="input57"
+          <input type="let" class="input57"
             style=" font-size: 17px; font-weight: bold; width: 100px; height: 25px;  border-radius: 6px; text-align: center;"
             oninput="formatearMiles(this)">
         </td>
         <td style=" border: 3px solid; width: 110px; ">
-          <input type="number" class="input58"
+          <input type="let" class="input58"
             style=" font-size: 17px; font-weight: bold; width: 100px; height: 25px;  border-radius: 6px; text-align: center;"
             oninput="formatearMiles(this)">
         </td>
@@ -1345,12 +1360,12 @@
         <td><textarea></textarea></td>
         <td><textarea></textarea></td>
         <td style=" border: 3px solid; ">
-          <input type="number" class="input59"
+          <input type="let" class="input59"
             style=" font-size: 17px; font-weight: bold; width: 100px; height: 25px;  border-radius: 6px; text-align: center;"
             oninput="formatearMiles(this)">
         </td>
         <td style=" border: 3px solid; width: 110px; ">
-          <input type="number" class="input60"
+          <input type="let" class="input60"
             style=" font-size: 17px; font-weight: bold; width: 100px; height: 25px;  border-radius: 6px; text-align: center;"
             oninput="formatearMiles(this)">
         </td>
@@ -1379,12 +1394,12 @@
         <td><textarea></textarea></td>
         <td><textarea></textarea></td>
         <td style=" border: 3px solid; ">
-          <input type="number" class="input61"
+          <input type="let" class="input61"
             style=" font-size: 17px; font-weight: bold; width: 100px; height: 25px;  border-radius: 6px; text-align: center;"
             oninput="formatearMiles(this)">
         </td>
         <td style=" border: 3px solid; width: 110px; ">
-          <input type="number" class="input62"
+          <input type="let" class="input62"
             style=" font-size: 17px; font-weight: bold; width: 100px; height: 25px;  border-radius: 6px; text-align: center;"
             oninput="formatearMiles(this)">
         </td>
@@ -1413,12 +1428,12 @@
         <td><textarea></textarea></td>
         <td><textarea></textarea></td>
         <td style=" border: 3px solid; ">
-          <input type="number" class="input63"
+          <input type="let" class="input63"
             style=" font-size: 17px; font-weight: bold; width: 100px; height: 25px;  border-radius: 6px; text-align: center;"
             oninput="formatearMiles(this)">
         </td>
         <td style=" border: 3px solid; width: 110px; ">
-          <input type="number" class="input64"
+          <input type="let" class="input64"
             style=" font-size: 17px; font-weight: bold; width: 100px; height: 25px;  border-radius: 6px; text-align: center;"
             oninput="formatearMiles(this)">
         </td>
@@ -1447,12 +1462,12 @@
         <td><textarea></textarea></td>
         <td><textarea></textarea></td>
         <td style=" border: 3px solid; ">
-          <input type="number" class="input65"
+          <input type="let" class="input65"
             style=" font-size: 17px; font-weight: bold; width: 100px; height: 25px;  border-radius: 6px; text-align: center;"
             oninput="formatearMiles(this)">
         </td>
         <td style=" border: 3px solid; width: 110px; ">
-          <input type="number" class="input66"
+          <input type="let" class="input66"
             style=" font-size: 17px; font-weight: bold; width: 100px; height: 25px;  border-radius: 6px; text-align: center;"
             oninput="formatearMiles(this)">
         </td>
@@ -1482,12 +1497,12 @@
         <td><textarea></textarea></td>
         <td><textarea></textarea></td>
         <td style=" border: 3px solid; ">
-          <input type="number" class="input67"
+          <input type="let" class="input67"
             style=" font-size: 17px; font-weight: bold; width: 100px; height: 25px;  border-radius: 6px; text-align: center;"
             oninput="formatearMiles(this)">
         </td>
         <td style=" border: 3px solid; width: 110px; ">
-          <input type="number" class="input68"
+          <input type="let" class="input68"
             style=" font-size: 17px; font-weight: bold; width: 100px; height: 25px;  border-radius: 6px; text-align: center;"
             oninput="formatearMiles(this)">
         </td>
@@ -1516,12 +1531,12 @@
         <td><textarea></textarea></td>
         <td><textarea></textarea></td>
         <td style=" border: 3px solid; ">
-          <input type="number" class="input69"
+          <input type="let" class="input69"
             style=" font-size: 17px; font-weight: bold; width: 100px; height: 25px;  border-radius: 6px; text-align: center;"
             oninput="formatearMiles(this)">
         </td>
         <td style=" border: 3px solid; width: 110px; ">
-          <input type="number" class="input70"
+          <input type="let" class="input70"
             style=" font-size: 17px; font-weight: bold; width: 100px; height: 25px;  border-radius: 6px; text-align: center;"
             oninput="formatearMiles(this)">
         </td>
@@ -1550,12 +1565,12 @@
         <td><textarea></textarea></td>
         <td><textarea></textarea></td>
         <td style=" border: 3px solid; ">
-          <input type="number" class="input71"
+          <input type="let" class="input71"
             style=" font-size: 17px; font-weight: bold; width: 100px; height: 25px;  border-radius: 6px; text-align: center;"
             oninput="formatearMiles(this)">
         </td>
         <td style=" border: 3px solid; width: 110px; ">
-          <input type="number" class="input72"
+          <input type="let" class="input72"
             style=" font-size: 17px; font-weight: bold; width: 100px; height: 25px;  border-radius: 6px; text-align: center;"
             oninput="formatearMiles(this)">
         </td>
@@ -1584,12 +1599,12 @@
         <td><textarea></textarea></td>
         <td><textarea></textarea></td>
         <td style=" border: 3px solid; ">
-          <input type="number" class="input73"
+          <input type="let" class="input73"
             style=" font-size: 17px; font-weight: bold; width: 100px; height: 25px;  border-radius: 6px; text-align: center;"
             oninput="formatearMiles(this)">
         </td>
         <td style=" border: 3px solid; width: 110px; ">
-          <input type="number" class="input74"
+          <input type="let" class="input74"
             style=" font-size: 17px; font-weight: bold; width: 100px; height: 25px;  border-radius: 6px; text-align: center;"
             oninput="formatearMiles(this)">
         </td>
@@ -1619,12 +1634,12 @@
         <td><textarea></textarea></td>
         <td><textarea></textarea></td>
         <td style=" border: 3px solid; ">
-          <input type="number" class="input75"
+          <input type="let" class="input75"
             style=" font-size: 17px; font-weight: bold; width: 100px; height: 25px;  border-radius: 6px; text-align: center;"
             oninput="formatearMiles(this)">
         </td>
         <td style=" border: 3px solid; width: 110px; ">
-          <input type="number" class="input76"
+          <input type="let" class="input76"
             style=" font-size: 17px; font-weight: bold; width: 100px; height: 25px;  border-radius: 6px; text-align: center;"
             oninput="formatearMiles(this)">
         </td>
@@ -1653,12 +1668,12 @@
         <td><textarea></textarea></td>
         <td><textarea></textarea></td>
         <td style=" border: 3px solid; ">
-          <input type="number" class="input77"
+          <input type="let" class="input77"
             style=" font-size: 17px; font-weight: bold; width: 100px; height: 25px;  border-radius: 6px; text-align: center;"
             oninput="formatearMiles(this)">
         </td>
         <td style=" border: 3px solid; width: 110px; ">
-          <input type="number" class="input78"
+          <input type="let" class="input78"
             style=" font-size: 17px; font-weight: bold; width: 100px; height: 25px;  border-radius: 6px; text-align: center;"
             oninput="formatearMiles(this)">
         </td>
@@ -1687,12 +1702,12 @@
         <td><textarea></textarea></td>
         <td><textarea></textarea></td>
         <td style=" border: 3px solid; ">
-          <input type="number" class="input79"
+          <input type="let" class="input79"
             style=" font-size: 17px; font-weight: bold; width: 100px; height: 25px;  border-radius: 6px; text-align: center;"
             oninput="formatearMiles(this)">
         </td>
         <td style=" border: 3px solid; width: 110px; ">
-          <input type="number" class="input80"
+          <input type="let" class="input80"
             style=" font-size: 17px; font-weight: bold; width: 100px; height: 25px;  border-radius: 6px; text-align: center;"
             oninput="formatearMiles(this)">
         </td>
@@ -1722,12 +1737,12 @@
         <td><textarea></textarea></td>
         <td><textarea></textarea></td>
         <td style=" border: 3px solid; ">
-          <input type="number" class="input81"
+          <input type="let" class="input81"
             style=" font-size: 17px; font-weight: bold; width: 100px; height: 25px;  border-radius: 6px; text-align: center;"
             oninput="formatearMiles(this)">
         </td>
         <td style=" border: 3px solid; width: 110px; ">
-          <input type="number" class="input82"
+          <input type="let" class="input82"
             style=" font-size: 17px; font-weight: bold; width: 100px; height: 25px;  border-radius: 6px; text-align: center;"
             oninput="formatearMiles(this)">
         </td>
@@ -1756,12 +1771,12 @@
         <td><textarea></textarea></td>
         <td><textarea></textarea></td>
         <td style=" border: 3px solid; ">
-          <input type="number" class="input83"
+          <input type="let" class="input83"
             style=" font-size: 17px; font-weight: bold; width: 100px; height: 25px;  border-radius: 6px; text-align: center;"
             oninput="formatearMiles(this)">
         </td>
         <td style=" border: 3px solid; width: 110px; ">
-          <input type="number" class="input84"
+          <input type="let" class="input84"
             style=" font-size: 17px; font-weight: bold; width: 100px; height: 25px;  border-radius: 6px; text-align: center;"
             oninput="formatearMiles(this)">
         </td>
@@ -1791,12 +1806,12 @@
         <td><textarea></textarea></td>
         <td><textarea></textarea></td>
         <td style=" border: 3px solid; ">
-          <input type="number" class="input85"
+          <input type="let" class="input85"
             style=" font-size: 17px; font-weight: bold; width: 100px; height: 25px;  border-radius: 6px; text-align: center;"
             oninput="formatearMiles(this)">
         </td>
         <td style=" border: 3px solid; width: 110px; ">
-          <input type="number" class="input86"
+          <input type="let" class="input86"
             style=" font-size: 17px; font-weight: bold; width: 100px; height: 25px;  border-radius: 6px; text-align: center;"
             oninput="formatearMiles(this)">
         </td>
@@ -1825,12 +1840,12 @@
         <td><textarea></textarea></td>
         <td><textarea></textarea></td>
         <td style=" border: 3px solid; ">
-          <input type="number" class="input87"
+          <input type="let" class="input87"
             style=" font-size: 17px; font-weight: bold; width: 100px; height: 25px;  border-radius: 6px; text-align: center;"
             oninput="formatearMiles(this)">
         </td>
         <td style=" border: 3px solid; width: 110px; ">
-          <input type="number" class="input88"
+          <input type="let" class="input88"
             style=" font-size: 17px; font-weight: bold; width: 100px; height: 25px;  border-radius: 6px; text-align: center;"
             oninput="formatearMiles(this)">
         </td>
@@ -1860,12 +1875,12 @@
         <td><textarea></textarea></td>
         <td><textarea></textarea></td>
         <td style=" border: 3px solid; ">
-          <input type="number" class="input89"
+          <input type="let" class="input89"
             style=" font-size: 17px; font-weight: bold; width: 100px; height: 25px;  border-radius: 6px; text-align: center;"
             oninput="formatearMiles(this)">
         </td>
         <td style=" border: 3px solid; width: 110px; ">
-          <input type="number" class="input90"
+          <input type="let" class="input90"
             style=" font-size: 17px; font-weight: bold; width: 100px; height: 25px;  border-radius: 6px; text-align: center;"
             oninput="formatearMiles(this)">
         </td>
@@ -1894,12 +1909,12 @@
         <td><textarea></textarea></td>
         <td><textarea></textarea></td>
         <td style=" border: 3px solid; ">
-          <input type="number" class="input91"
+          <input type="let" class="input91"
             style=" font-size: 17px; font-weight: bold; width: 100px; height: 25px;  border-radius: 6px; text-align: center;"
             oninput="formatearMiles(this)">
         </td>
         <td style=" border: 3px solid; width: 110px; ">
-          <input type="number" class="input92"
+          <input type="let" class="input92"
             style=" font-size: 17px; font-weight: bold; width: 100px; height: 25px;  border-radius: 6px; text-align: center;"
             oninput="formatearMiles(this)">
         </td>
@@ -1928,12 +1943,12 @@
         <td><textarea></textarea></td>
         <td><textarea></textarea></td>
         <td style=" border: 3px solid; ">
-          <input type="number" class="input93"
+          <input type="let" class="input93"
             style=" font-size: 17px; font-weight: bold; width: 100px; height: 25px;  border-radius: 6px; text-align: center;"
             oninput="formatearMiles(this)">
         </td>
         <td style=" border: 3px solid; width: 110px; ">
-          <input type="number" class="input94"
+          <input type="let" class="input94"
             style=" font-size: 17px; font-weight: bold; width: 100px; height: 25px;  border-radius: 6px; text-align: center;"
             oninput="formatearMiles(this)">
         </td>
@@ -1962,12 +1977,12 @@
         <td><textarea></textarea></td>
         <td><textarea></textarea></td>
         <td style=" border: 3px solid; ">
-          <input type="number" class="input95"
+          <input type="let" class="input95"
             style=" font-size: 17px; font-weight: bold; width: 100px; height: 25px;  border-radius: 6px; text-align: center;"
             oninput="formatearMiles(this)">
         </td>
         <td style=" border: 3px solid; width: 110px; ">
-          <input type="number" class="input96"
+          <input type="let" class="input96"
             style=" font-size: 17px; font-weight: bold; width: 100px; height: 25px;  border-radius: 6px; text-align: center;"
             oninput="formatearMiles(this)">
         </td>
@@ -1997,12 +2012,12 @@
         <td><textarea></textarea></td>
         <td><textarea></textarea></td>
         <td style=" border: 3px solid; ">
-          <input type="number" class="input97"
+          <input type="let" class="input97"
             style=" font-size: 17px; font-weight: bold; width: 100px; height: 25px;  border-radius: 6px; text-align: center;"
             oninput="formatearMiles(this)">
         </td>
         <td style=" border: 3px solid; width: 110px; ">
-          <input type="number" class="input98"
+          <input type="let" class="input98"
             style=" font-size: 17px; font-weight: bold; width: 100px; height: 25px;  border-radius: 6px; text-align: center;"
             oninput="formatearMiles(this)">
         </td>
@@ -2031,12 +2046,12 @@
         <td><textarea></textarea></td>
         <td><textarea></textarea></td>
         <td style=" border: 3px solid; ">
-          <input type="number" class="input99"
+          <input type="let" class="input99"
             style=" font-size: 17px; font-weight: bold; width: 100px; height: 25px;  border-radius: 6px; text-align: center;"
             oninput="formatearMiles(this)">
         </td>
         <td style=" border: 3px solid; width: 110px; ">
-          <input type="number" class="input100"
+          <input type="let" class="input100"
             style=" font-size: 17px; font-weight: bold; width: 100px; height: 25px;  border-radius: 6px; text-align: center;"
             oninput="formatearMiles(this)">
         </td>
@@ -2065,12 +2080,12 @@
         <td><textarea></textarea></td>
         <td><textarea></textarea></td>
         <td style=" border: 3px solid; ">
-          <input type="number" class="input101"
+          <input type="let" class="input101"
             style=" font-size: 17px; font-weight: bold; width: 100px; height: 25px;  border-radius: 6px; text-align: center;"
             oninput="formatearMiles(this)">
         </td>
         <td style=" border: 3px solid; width: 110px; ">
-          <input type="number" class="input102"
+          <input type="let" class="input102"
             style=" font-size: 17px; font-weight: bold; width: 100px; height: 25px;  border-radius: 6px; text-align: center;"
             oninput="formatearMiles(this)">
         </td>
@@ -2099,12 +2114,12 @@
         <td><textarea></textarea></td>
         <td><textarea></textarea></td>
         <td style=" border: 3px solid; ">
-          <input type="number" class="input103"
+          <input type="let" class="input103"
             style=" font-size: 17px; font-weight: bold; width: 100px; height: 25px;  border-radius: 6px; text-align: center;"
             oninput="formatearMiles(this)">
         </td>
         <td style=" border: 3px solid; width: 110px; ">
-          <input type="number" class="input104"
+          <input type="let" class="input104"
             style=" font-size: 17px; font-weight: bold; width: 100px; height: 25px;  border-radius: 6px; text-align: center;"
             oninput="formatearMiles(this)">
         </td>
@@ -2134,12 +2149,12 @@
         <td><textarea></textarea></td>
         <td><textarea></textarea></td>
         <td style=" border: 3px solid; ">
-          <input type="number" class="input105"
+          <input type="let" class="input105"
             style=" font-size: 17px; font-weight: bold; width: 100px; height: 25px;  border-radius: 6px; text-align: center;"
             oninput="formatearMiles(this)">
         </td>
         <td style=" border: 3px solid; width: 110px; ">
-          <input type="number" class="input106"
+          <input type="let" class="input106"
             style=" font-size: 17px; font-weight: bold; width: 100px; height: 25px;  border-radius: 6px; text-align: center;"
             oninput="formatearMiles(this)">
         </td>
@@ -2168,12 +2183,12 @@
         <td><textarea></textarea></td>
         <td><textarea></textarea></td>
         <td style=" border: 3px solid; ">
-          <input type="number" class="input107"
+          <input type="let" class="input107"
             style=" font-size: 17px; font-weight: bold; width: 100px; height: 25px;  border-radius: 6px; text-align: center;"
             oninput="formatearMiles(this)">
         </td>
         <td style=" border: 3px solid; width: 110px; ">
-          <input type="number" class="input108"
+          <input type="let" class="input108"
             style=" font-size: 17px; font-weight: bold; width: 100px; height: 25px;  border-radius: 6px; text-align: center;"
             oninput="formatearMiles(this)">
         </td>
@@ -2202,12 +2217,12 @@
         <td><textarea></textarea></td>
         <td><textarea></textarea></td>
         <td style=" border: 3px solid; ">
-          <input type="number" class="input109"
+          <input type="let" class="input109"
             style=" font-size: 17px; font-weight: bold; width: 100px; height: 25px;  border-radius: 6px; text-align: center;"
             oninput="formatearMiles(this)">
         </td>
         <td style=" border: 3px solid; width: 110px; ">
-          <input type="number" class="input110"
+          <input type="let" class="input110"
             style=" font-size: 17px; font-weight: bold; width: 100px; height: 25px;  border-radius: 6px; text-align: center;"
             oninput="formatearMiles(this)">
         </td>
@@ -2237,12 +2252,12 @@
         <td><textarea></textarea></td>
         <td><textarea></textarea></td>
         <td style=" border: 3px solid; ">
-          <input type="number" class="input111"
+          <input type="let" class="input111"
             style=" font-size: 17px; font-weight: bold; width: 100px; height: 25px;  border-radius: 6px; text-align: center;"
             oninput="formatearMiles(this)">
         </td>
         <td style=" border: 3px solid; width: 110px; ">
-          <input type="number" class="input112"
+          <input type="let" class="input112"
             style=" font-size: 17px; font-weight: bold; width: 100px; height: 25px;  border-radius: 6px; text-align: center;"
             oninput="formatearMiles(this)">
         </td>
@@ -2271,12 +2286,12 @@
         <td><textarea></textarea></td>
         <td><textarea></textarea></td>
         <td style=" border: 3px solid; ">
-          <input type="number" class="input113"
+          <input type="let" class="input113"
             style=" font-size: 17px; font-weight: bold; width: 100px; height: 25px;  border-radius: 6px; text-align: center;"
             oninput="formatearMiles(this)">
         </td>
         <td style=" border: 3px solid; width: 110px; ">
-          <input type="number" class="input114"
+          <input type="let" class="input114"
             style=" font-size: 17px; font-weight: bold; width: 100px; height: 25px;  border-radius: 6px; text-align: center;"
             oninput="formatearMiles(this)">
         </td>
@@ -2306,12 +2321,12 @@
         <td><textarea></textarea></td>
         <td><textarea></textarea></td>
         <td style=" border: 3px solid; ">
-          <input type="number" class="input115"
+          <input type="let" class="input115"
             style=" font-size: 17px; font-weight: bold; width: 100px; height: 25px;  border-radius: 6px; text-align: center;"
             oninput="formatearMiles(this)">
         </td>
         <td style=" border: 3px solid; width: 110px; ">
-          <input type="number" class="input116"
+          <input type="let" class="input116"
             style=" font-size: 17px; font-weight: bold; width: 100px; height: 25px;  border-radius: 6px; text-align: center;"
             oninput="formatearMiles(this)">
         </td>
@@ -2342,39 +2357,63 @@
 
 
     document.addEventListener("DOMContentLoaded", () => {
-      const campos = document.querySelectorAll("textarea, input[type=number], input[type=text], input.cantidad2, input.cantidad3, input.cantidad4, input.venta");
+      // === GUARDAR/RESTAURAR INPUTS y TEXTAREAS ===
+      const campos = document.querySelectorAll("textarea, input[type=let], input[type=text], input.cantidad2, input.cantidad3, input.cantidad4, input.venta");
+      const premiosDiv = document.querySelector(".cantidad3");
+      const premiosGuardado = localStorage.getItem("premios-total");
+      if (premiosDiv && premiosGuardado !== null) {
+        premiosDiv.textContent = parseFloat(premiosGuardado).toLocaleString('es-CO');
+        premiosDiv.dataset.valor = premiosGuardado;
+      }
 
-      // Restaurar valores
       campos.forEach((campo, index) => {
-        const guardado = localStorage.getItem(`campo_${index}`);
-        if (guardado !== null) {
-          campo.value = guardado;
-          if (campo.classList.contains("venta")) {
-            campo.dataset.valor = guardado.replace(/\D/g, '');
-            campo.value = campo.dataset.valor.replace(/\B(?=(\d{3})+(?!\d))/g, ".");
+        const key = `input-${index}`;
+        const valorGuardado = localStorage.getItem(key);
+        if (valorGuardado !== null) {
+          campo.value = valorGuardado;
+
+          // Para inputs que usan dataset.valor
+          if (campo.classList.contains("cantidad2") || campo.classList.contains("cantidad3") || campo.classList.contains("cantidad4") || campo.classList.contains("venta")) {
+            campo.dataset.valor = valorGuardado.replace(/\D/g, "") || "0";
           }
+        }
+
+        campo.addEventListener("input", () => {
+          localStorage.setItem(key, campo.value);
+
+          if (campo.classList.contains("cantidad2") || campo.classList.contains("cantidad3") || campo.classList.contains("cantidad4") || campo.classList.contains("venta")) {
+            campo.dataset.valor = campo.value.replace(/\D/g, "") || "0";
+          }
+
+          calcularTotales?.();
+          verificarCamposVacios?.();
+          guardarCeldasTd(); // También guarda los <td class="rX">
+        });
+      });
+
+      // === GUARDAR Y RESTAURAR CELDAS <td class="rX"> ===
+      const celdas = document.querySelectorAll("td[class^='r']");
+
+      // Restaurar al cargar
+      celdas.forEach((celda, index) => {
+        const valor = localStorage.getItem(`td-${index}`);
+        if (valor !== null) {
+          celda.textContent = valor;
         }
       });
 
-      // Guardar valores al escribir
-      campos.forEach((campo, index) => {
-        campo.addEventListener("input", () => {
-          localStorage.setItem(`campo_${index}`, campo.value);
+      // Guardar todos los <td> con clase rX
+      function guardarCeldasTd() {
+        celdas.forEach((celda, index) => {
+          localStorage.setItem(`td-${index}`, celda.textContent.trim());
         });
-      });
-    });
+      }
 
-    function formatearMiles(input) {
-      let soloNumeros = input.value.replace(/\D/g, '');
-      input.dataset.valor = soloNumeros || "0";
-      const valorFormateado = soloNumeros.replace(/\B(?=(\d{3})+(?!\d))/g, ".");
-      const posicion = input.selectionStart;
-      input.value = valorFormateado;
-      input.setSelectionRange(input.value.length, input.value.length);
-
-      detectarFila?.(input);
+      // Guardar también al cargar
+      guardarCeldasTd();
       calcularTotales?.();
-    }
+      verificarCamposVacios?.();
+    });
 
 
 
@@ -2493,7 +2532,20 @@
       verificarCamposVacios();
     }
 
-   
+    function formatearMiles(input) {
+      const valor = input.value.replace(/\D/g, "");
+      if (valor === "") {
+        input.value = "";
+        input.dataset.valor = "0";
+      } else {
+        const numero = parseInt(valor);
+        input.dataset.valor = numero;
+        input.value = numero.toLocaleString("es-CO");
+      }
+
+      calcularTotales();
+      verificarCamposVacios();
+    }
 
     function verificarCamposVacios() {
       const verificaciones = [
@@ -2650,33 +2702,15 @@
       return valor.replace(/\./g, '').replace(',', '.');
     }
 
-  function formatearMiles(input) {
-  // Obtener solo números
-  let soloNumeros = input.value.replace(/\D/g, '');
+    function formatearMiles(input) {
+      let valor = input.value.replace(/\./g, '').replace(',', '.');
+      if (!isNaN(valor) && valor.trim() !== '') {
+        let num = parseFloat(valor);
+        input.value = num.toLocaleString('es-CO');
+      }
 
-  // Limitar si deseas (opcional), por ejemplo a 12 dígitos:
-  // soloNumeros = soloNumeros.slice(0, 12);
-
-  // Guardar valor crudo en dataset
-  input.dataset.valor = soloNumeros || "0";
-
-  // Formatear con puntos (1.000.000 etc.)
-  let valorFormateado = soloNumeros.replace(/\B(?=(\d{3})+(?!\d))/g, ".");
-
-  // Guardar posición original del cursor
-  const posInicial = input.selectionStart;
-
-  // Actualizar el input con el valor formateado
-  input.value = valorFormateado;
-
-  // Restaurar posición del cursor al final
-  input.setSelectionRange(input.value.length, input.value.length);
-
-  // Si usas esto para cálculo automático, lo dejamos
-  detectarFila?.(input);
-  calcularTotales?.();
-}
-
+      detectarFila(input);
+    }
 
     function detectarFila(input) {
       const clases = Array.from(input.classList);
@@ -2745,7 +2779,19 @@
       calcularTotales();
     }
 
-  
+    function formatearMiles(input) {
+      // Quitar todo excepto dígitos
+      let soloNumeros = input.value.replace(/\D/g, '');
+
+      // Guardar el número limpio como atributo de datos
+      input.dataset.valor = soloNumeros || "0";
+
+      // Formatear con puntos para mostrar
+      input.value = soloNumeros.replace(/\B(?=(\d{3})+(?!\d))/g, ".");
+
+      // Llamar cálculo automático (opcional)
+      detectarFila(input);
+    }
   </script>
 
 
@@ -2782,64 +2828,64 @@
       });
 
       const celdasResultado = tablaClon.querySelectorAll(".resultado");
-celdasResultado.forEach(td => {
-  const valor = td.textContent.replace(/,/g, "").trim(); // quitar comas
-  td.textContent = valor;
-});
+      celdasResultado.forEach(td => {
+        const valor = td.textContent.replace(/,/g, "").trim(); // quitar comas
+        td.textContent = valor;
+      });
     }
 
 
 
-    
 
-  function exportarAExcelReal() {
-    const tabla = document.getElementById("miTabla");
-    if (!tabla) {
-      alert("No se encontró la tabla.");
-      return;
+
+    function exportarAExcelReal() {
+      const tabla = document.getElementById("miTabla");
+      if (!tabla) {
+        alert("No se encontró la tabla.");
+        return;
+      }
+
+      // Clonar la tabla
+      const tablaClon = tabla.cloneNode(true);
+
+      // Reemplazar inputs y textareas por su valor
+      const campos = tablaClon.querySelectorAll("input, textarea");
+      campos.forEach(el => {
+        const td = el.closest("td");
+        if (td) {
+          const valor = el.value.trim().replace(/,/g, ""); // quitar comas si el input tiene
+          const span = document.createElement("span");
+          span.textContent = valor;
+          td.replaceChild(span, el);
+        }
+      });
+
+      // Quitar comas en celdas de clase .resultado
+      const resultados = tablaClon.querySelectorAll(".resultado");
+      resultados.forEach(td => {
+        if (td.textContent.includes(",")) {
+          td.textContent = td.textContent.replace(/,/g, "").trim();
+        }
+      });
+
+      // Convertir tabla a hoja de cálculo
+      const wb = XLSX.utils.book_new();
+      const ws = XLSX.utils.table_to_sheet(tablaClon, { raw: true });
+
+
+      // Forzar que celdas tipo número sean leídas como números
+      Object.keys(ws).forEach(key => {
+        if (key[0] === '!') return; // omitir claves especiales
+        const celda = ws[key];
+        if (typeof celda.v === "string" && /^\d+$/.test(celda.v)) {
+          celda.t = "n"; // tipo número
+          celda.v = parseInt(celda.v, 10);
+        }
+      });
+
+      XLSX.utils.book_append_sheet(wb, ws, "Datos");
+      XLSX.writeFile(wb, "tabla_loterias.xlsx");
     }
-
-    // Clonar la tabla
-    const tablaClon = tabla.cloneNode(true);
-
-    // Reemplazar inputs y textareas por su valor
-    const campos = tablaClon.querySelectorAll("input, textarea");
-    campos.forEach(el => {
-      const td = el.closest("td");
-      if (td) {
-        const valor = el.value.trim().replace(/,/g, ""); // quitar comas si el input tiene
-        const span = document.createElement("span");
-        span.textContent = valor;
-        td.replaceChild(span, el);
-      }
-    });
-
-    // Quitar comas en celdas de clase .resultado
-    const resultados = tablaClon.querySelectorAll(".resultado");
-    resultados.forEach(td => {
-      if (td.textContent.includes(",")) {
-        td.textContent = td.textContent.replace(/,/g, "").trim();
-      }
-    });
-
-    // Convertir tabla a hoja de cálculo
-    const wb = XLSX.utils.book_new();
- const ws = XLSX.utils.table_to_sheet(tablaClon, { raw: true });
-
-
-    // Forzar que celdas tipo número sean leídas como números
-    Object.keys(ws).forEach(key => {
-      if (key[0] === '!') return; // omitir claves especiales
-      const celda = ws[key];
-      if (typeof celda.v === "string" && /^\d+$/.test(celda.v)) {
-        celda.t = "n"; // tipo número
-        celda.v = parseInt(celda.v, 10);
-      }
-    });
-
-    XLSX.utils.book_append_sheet(wb, ws, "Datos");
-    XLSX.writeFile(wb, "tabla_loterias.xlsx");
-  }
 
 
 
@@ -2931,12 +2977,42 @@ celdasResultado.forEach(td => {
 
       // Crear archivo Excel real con XLSX
       const wb = XLSX.utils.book_new();
-  const ws = XLSX.utils.table_to_sheet(tablaClon, { raw: true });
+      const ws = XLSX.utils.table_to_sheet(tablaClon, { raw: true });
 
       XLSX.utils.book_append_sheet(wb, ws, "Datos");
       XLSX.writeFile(wb, "tabla_loterias.xlsx"); // ✅ Real .xlsx
     }
   </script>
+
+
+  <td id="fechaHoraActual" style="font-weight: bold; color: blue;"></td>
+
+  <td id="fechaHoraActual" style="font-weight: bold; color: blue;"></td>
+
+<script>
+  function ponerFechaHora() {
+    const ahora = new Date();
+
+    const opciones = {
+      weekday: "short",    // ej: "vie"
+      day: "2-digit",
+      month: "short",      // ej: "jul"
+      year: "numeric",
+      hour: "2-digit",
+      minute: "2-digit",
+      hour12: true
+    };
+
+    const fechaHora = ahora.toLocaleString("es-CO", opciones);
+    document.getElementById("fechaHoraActual").textContent = fechaHora;
+  }
+
+  document.addEventListener("DOMContentLoaded", () => {
+    ponerFechaHora(); // Primera vez
+    setInterval(ponerFechaHora, 1000); // Cada segundo, aunque ya no se muestren
+  });
+</script>
+
 
 
 
