@@ -2518,20 +2518,7 @@
       verificarCamposVacios();
     }
 
-    function formatearMiles(input) {
-      const valor = input.value.replace(/\D/g, "");
-      if (valor === "") {
-        input.value = "";
-        input.dataset.valor = "0";
-      } else {
-        const numero = parseInt(valor);
-        input.dataset.valor = numero;
-        input.value = numero.toLocaleString("es-CO");
-      }
-
-      calcularTotales();
-      verificarCamposVacios();
-    }
+   
 
     function verificarCamposVacios() {
       const verificaciones = [
@@ -2688,15 +2675,33 @@
       return valor.replace(/\./g, '').replace(',', '.');
     }
 
-    function formatearMiles(input) {
-      let valor = input.value.replace(/\./g, '').replace(',', '.');
-      if (!isNaN(valor) && valor.trim() !== '') {
-        let num = parseFloat(valor);
-        input.value = num.toLocaleString('es-CO');
-      }
+  function formatearMiles(input) {
+  // Obtener solo números
+  let soloNumeros = input.value.replace(/\D/g, '');
 
-      detectarFila(input);
-    }
+  // Limitar si deseas (opcional), por ejemplo a 12 dígitos:
+  // soloNumeros = soloNumeros.slice(0, 12);
+
+  // Guardar valor crudo en dataset
+  input.dataset.valor = soloNumeros || "0";
+
+  // Formatear con puntos (1.000.000 etc.)
+  let valorFormateado = soloNumeros.replace(/\B(?=(\d{3})+(?!\d))/g, ".");
+
+  // Guardar posición original del cursor
+  const posInicial = input.selectionStart;
+
+  // Actualizar el input con el valor formateado
+  input.value = valorFormateado;
+
+  // Restaurar posición del cursor al final
+  input.setSelectionRange(input.value.length, input.value.length);
+
+  // Si usas esto para cálculo automático, lo dejamos
+  detectarFila?.(input);
+  calcularTotales?.();
+}
+
 
     function detectarFila(input) {
       const clases = Array.from(input.classList);
@@ -2765,19 +2770,7 @@
       calcularTotales();
     }
 
-    function formatearMiles(input) {
-      // Quitar todo excepto dígitos
-      let soloNumeros = input.value.replace(/\D/g, '');
-
-      // Guardar el número limpio como atributo de datos
-      input.dataset.valor = soloNumeros || "0";
-
-      // Formatear con puntos para mostrar
-      input.value = soloNumeros.replace(/\B(?=(\d{3})+(?!\d))/g, ".");
-
-      // Llamar cálculo automático (opcional)
-      detectarFila(input);
-    }
+  
   </script>
 
 
