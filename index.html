@@ -56,13 +56,12 @@
 
       <tr>
 
-        <td style=" border: 3px solid black; background-color: yellow;">
-          <input type="tel" class="venta"
-            style="background-color: yellow; font-size: 17px; font-weight: bold; width: 100px; height: 25px; box-shadow: 0 0 8px rgba(8, 2, 5, 1); border-radius: 6px; text-align: center;"
-            oninput="formatearMiles(this)">
+      <td onclick="this.querySelector('input').focus()" style="border: 3px solid black; background-color: yellow;">
+  <input type="tel" inputmode="numeric" class="venta"
+    style="background-color: yellow; font-size: 17px; font-weight: bold; width: 100px; height: 25px; box-shadow: 0 0 8px rgba(8, 2, 5, 1); border-radius: 6px; text-align: center;"
+    oninput="formatearMiles(this)">
+</td>
 
-
-        </td>
 
         <td><textarea></textarea></td>
         <td style="border-top: 3px solid; border-bottom: 3px solid; border-left: 3px solid;">Nequi</td>
@@ -2532,7 +2531,24 @@
 
       verificarCamposVacios();
     }
+function formatearMiles(input) {
+  const valor = input.value.replace(/\D/g, "");
+  if (valor === "") {
+    input.value = "";
+    input.dataset.valor = "0";
+  } else {
+    const numero = parseInt(valor);
+    input.dataset.valor = numero;
+    input.value = numero.toLocaleString("es-CO");
+  }
 
+  detectarFila(input);     // Para actualizar la fila correspondiente
+  calcularTotales();       // Si usas totales globales
+  verificarCamposVacios(); // Si deseas actualizar colores
+}
+
+
+    /*
     function formatearMiles(input) {
       const valor = input.value.replace(/\D/g, "");
       if (valor === "") {
@@ -2546,7 +2562,7 @@
 
       calcularTotales();
       verificarCamposVacios();
-    }
+    } */
 
     function verificarCamposVacios() {
       const verificaciones = [
@@ -2703,6 +2719,7 @@
       return valor.replace(/\./g, '').replace(',', '.');
     }
 
+    /*
     function formatearMiles(input) {
       let valor = input.value.replace(/\./g, '').replace(',', '.');
       if (!isNaN(valor) && valor.trim() !== '') {
@@ -2711,7 +2728,7 @@
       }
 
       detectarFila(input);
-    }
+    } */
 
     function detectarFila(input) {
       const clases = Array.from(input.classList);
@@ -2779,7 +2796,7 @@
 
       calcularTotales();
     }
-
+/*
     function formatearMiles(input) {
       // Quitar todo excepto dígitos
       let soloNumeros = input.value.replace(/\D/g, '');
@@ -2792,7 +2809,7 @@
 
       // Llamar cálculo automático (opcional)
       detectarFila(input);
-    }
+    } */
   </script>
 
 
