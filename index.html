@@ -3,8 +3,7 @@
 
 <head>
   <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
-
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
 
   <link rel="stylesheet" href="estilos.css">
   <link rel="icon" type="image/png"
@@ -46,9 +45,6 @@
             <span id="fechaHoraActual" style="font-size: 13px;"></span>
           </div>
         </th>
-
-
-
 
         <th style="width: 105px;"></th>
       </tr>
@@ -123,10 +119,22 @@
             style=" font-size: 17px; font-weight: bold; width: 100px; height: 25px; text-align: center;"
             oninput="formatearMiles(this)"></td>
         <td><textarea></textarea></td>
-        <td rowspan="3"><img src="stich.webp" alt="" style="width: 150px; border-radius: 80px;"></td>
-        <td><textarea></textarea></td>
+       
+<td style="position: relative; height: 40px; width: 60px;">
+  <img src="stich.webp" alt="" 
+       style="
+         position: absolute;
+         top: 15px; /* Mueve la imagen hacia arriba */
+         left: 50%;
+         transform: translateX(-50%);
+         width: 150px;
+         border-radius: 80px;
+         pointer-events: none;
+       ">
+</td>
+
       </tr>
-      <!-- Fila 4 -->
+      <!-- Fila 4  <td rowspan="3"><img src="stich.webp" alt="" style="width: 150px; border-radius: 80px;"></td>-->
       <tr>
         <td id="sobra" style="font-weight: bolder; border: 3px solid;color: black;"></td>
         <td><textarea></textarea></td>
@@ -3048,6 +3056,3 @@
 </body>
 
 </html>
-
-
-
