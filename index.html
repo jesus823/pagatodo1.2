@@ -29,7 +29,7 @@
         <th style="width: 60px;border: 3px solid;color: black;">Unidades</th>
         <th style=" width: 110px; border: 3px solid;color: black;">Total</th>
         <th style="background-color: white; width: 30px;"></th>
-        <th style="width: 70px;border: 3px solid;color: black;">Monedas</th>
+        <th style="width: 50px;border: 3px solid;color: black;">Monedas</th>
         <th style="width: 60px;border: 3px solid;color: black;">Unidades</th>
         <th style="border: 3px solid;color: black; width: 105px;">Total</th>
         <th style="background-color: white; width: 30px;"></th>
@@ -122,7 +122,7 @@
             style=" font-size: 17px; font-weight: bold; width: 100px; height: 25px; text-align: center;"
             oninput="formatearMiles(this)"></td>
         <td><textarea></textarea></td>
-        <td><textarea></textarea></td>
+        <td rowspan="3"><img src="stich.webp" alt="" style="width: 150px; border-radius: 80px;"></td>
         <td><textarea></textarea></td>
       </tr>
       <!-- Fila 4 -->
@@ -171,7 +171,7 @@
             style="height: 25px;width: 50px;text-align: center;"></td>
         <td class="resultado resultado-monedas" style="font-weight: bolder;border: 3px solid;"></td>
         <td><textarea></textarea></td>
-        <td id="mio" style="border: 3px solid;">Mío</td>
+        <td id="mio" style="border: 3px solid;">Míoo</td>
         <td style="width: 70px; border: 3px solid;"><input type="tel" class="cantidad4"
             style=" font-size: 17px; font-weight: bold; width: 100px; height: 25px; text-align: center;"
             oninput="formatearMiles(this)"></td>
@@ -183,8 +183,8 @@
       <tr>
         <td></td>
         <td><textarea></textarea></td>
-        <td style="border: 3px solid;"><textarea></textarea></td>
-        <td style="border: 3px solid;"><input type="tel" class="cantidad2"
+        <td style="border: 3px solid;">Avances</td>
+        <td style="border: 3px solid;"><input type="tel" class="cantidad2" id="Avances1"
             style=" font-size: 17px; font-weight: bold; width: 100px; height: 25px;text-align: center;"
             oninput="formatearMiles(this)"></td>
         <td><textarea></textarea></td>
@@ -198,7 +198,7 @@
             style="height: 25px;width: 50px; text-align: center;"></td>
         <td class="resultado resultado-monedas" style="font-weight: bolder;border: 3px solid;"></td>
         <td><textarea></textarea></td>
-        <td style="border: 3px solid;">Avances</td>
+        <td id="Avances" style="border: 3px solid;">Avances</td>
         <td style="width: 70px; border: 3px solid;"><input type="tel" class="cantidad4"
             style=" font-size: 17px; font-weight: bold; width: 100px; height: 25px; text-align: center;"
             oninput="formatearMiles(this)"></td>
@@ -418,7 +418,8 @@
           style="font-weight: bold; font-size: 20px;background-color: rgb(125, 129, 125);border: 3px solid;">Premios
           Total </td>
         <td><textarea></textarea></td>
-        <td><textarea></textarea></td>
+        <td style="font-weight: bold; font-size: 17px;background-color: rgb(125, 129, 125);border: 3px solid;">
+          # Premios</td>
         <td><textarea></textarea></td>
         <td><textarea></textarea></td>
         <td><textarea></textarea></td>
@@ -461,7 +462,12 @@
 
 
         <td><textarea></textarea></td>
-        <td><textarea></textarea></td>
+        <td style="background-color: rgb(7, 134, 7); border: 3px solid;">
+          <div class="cantidad5"
+            style="font-size: 17px; color: white; font-weight: bold; width: 100px; height: 25px; text-align: center;
+           background-color: rgb(7, 134, 7); line-height: 25px; border-radius: 6px; pointer-events: none; user-select: none;">
+          </div>
+        </td>
         <td><textarea></textarea></td>
         <td><textarea></textarea></td>
         <td><textarea></textarea></td>
@@ -2379,7 +2385,7 @@
 
         campo.addEventListener("input", () => {
           localStorage.setItem(key, campo.value);
-
+          sumarInputsImpares();
           if (campo.classList.contains("cantidad2") || campo.classList.contains("cantidad3") || campo.classList.contains("cantidad4") || campo.classList.contains("venta")) {
             campo.dataset.valor = campo.value.replace(/\D/g, "") || "0";
           }
@@ -2568,7 +2574,9 @@
         { inputId: "nequi1", celdaId: "nequi" },
         { inputId: "alfonso1", celdaId: "alfonso" },
         { inputId: "descuadre1", celdaId: "descuadre" },
-        { inputId: "mio1", celdaId: "mio" }
+        { inputId: "mio1", celdaId: "mio" },
+        { inputId: "Avances1", celdaId: "Avances" }
+
       ];
 
       verificaciones.forEach(({ inputId, celdaId }) => {
@@ -2795,20 +2803,25 @@
 
       calcularTotales();
     }
-    /*
-        function formatearMiles(input) {
-          // Quitar todo excepto dígitos
-          tel soloNumeros = input.value.replace(/\D/g, '');
-    
-          // Guardar el número limpio como atributo de datos
-          input.dataset.valor = soloNumeros || "0";
-    
-          // Formatear con puntos para mostrar
-          input.value = soloNumeros.replace(/\B(?=(\d{3})+(?!\d))/g, ".");
-    
-          // Llamar cálculo automático (opcional)
-          detectarFila(input);
-        } */
+    function sumarInputsImpares() {
+      let suma = 0;
+
+      for (let i = 1; i <= 115; i += 2) {
+        const input = document.querySelector(`input.input${i}`);
+        if (input) {
+          const valor = parseFloat(input.value.replace(/\./g, '').replace(',', '.')) || 0;
+          suma += valor;
+        }
+      }
+
+      const campoCantidad5 = document.querySelector(".cantidad5");
+      if (campoCantidad5) {
+        campoCantidad5.value = suma.toLocaleString("es-CO"); // si es input
+        campoCantidad5.textContent = suma.toLocaleString("es-CO"); // si es div o span
+        campoCantidad5.dataset.valor = suma.toString(); // si lo usas como dataset
+      }
+    }
+
   </script>
 
 
@@ -2926,6 +2939,8 @@
         el.addEventListener("input", () => localStorage.setItem(clave, el.value));
         el.addEventListener("change", () => localStorage.setItem(clave, el.value));
       });
+      sumarInputsImpares(); // ← Llamado inicial para calcular al cargar
+
     });
   </script>
 
@@ -3032,4 +3047,3 @@
 </body>
 
 </html>
-
